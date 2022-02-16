@@ -1,0 +1,71 @@
+.sidenav
+{
+  height: 100%;
+  width: 270px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #99ccff;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.profile-img
+{
+  padding: 20px;
+  width: 260px;
+  border-radius: 200px;
+}
+
+.sidenav a
+{
+  padding-top: 10px;
+  text-align: center;
+  font-family: sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 800;
+  color: black;
+  display: block;
+}
+
+.sidenav a:hover
+{
+  color: #fff;
+}
+
+.uname
+{
+  font-weight: 800;
+  font-family: sans-serif;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.upoint
+{
+  font-family: sans-serif;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.main
+{
+  font-family: sans-serif;
+  margin-left: 300px;
+  font-size: 28px;
+  padding: 10px 20px;
+}
+
+
+.qu
+{
+  margin: 40px;
+  background: #99ccff;
+  border-radius: 25px;
+}
+
+body > div.main > div > div:nth-child(n) > div.card-body.body > a
+{
+  border-radius: 25px;
+}

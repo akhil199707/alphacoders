@@ -1,0 +1,85 @@
+html,
+body
+{
+  height: 100%;
+  background-color: #fff !important;
+  font-family: "Roboto" sans-serif;
+}
+
+.global-container
+{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+form
+{
+  padding-top: 10px;
+  margin-top: 30px;
+}
+
+.user
+{
+  padding: 20px;
+}
+
+.pass
+{
+  padding: 20px;
+}
+
+.pas
+{
+  border-radius: 25px;
+}
+
+.use
+{
+  border-radius: 25px;
+}
+
+.login-form
+{
+  width: 330px;
+  height: 450px;
+  background: #99ccff;
+  border-radius: 25px;
+}
+
+.button-set
+{
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+.btn-block
+{
+  border-radius: 25px;
+  width: 258px;
+}
+
+.forgot
+{
+  padding: 20px;
+}
+
+.don
+{
+  padding-left: 20px;
+}
+
+.login-img
+{
+  margin-top: 90px;
+  margin-right: 200px;
+  padding: 20px;
+  width: 700px;
+}
+
+.login
+{
+  padding: 20px;
+}

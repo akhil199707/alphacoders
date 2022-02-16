@@ -1,0 +1,14 @@
+.profile-img
+{
+  position: sticky;
+  padding-top: 15%;
+  width: 40%;
+  position: fixed;
+}
+
+.button
+{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-radius: 50%;
+}

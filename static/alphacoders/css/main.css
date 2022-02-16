@@ -1,0 +1,164 @@
+html {
+  scroll-behavior: smooth;
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+}
+body
+{
+  font-family: sans-serif;
+}
+
+#nav-bar
+{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar
+{
+  background-image: linear-gradient(to right, #4d94ff,#0047b3);
+  padding: 0 !important;
+}
+#nav-bar > nav > div > a > img
+{
+    max-height: 150px;
+    max-width: 30%;
+    overflow: visible;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 100px;
+}
+
+.navbar-nav li
+{
+  padding: 0 10;
+}
+
+.navbar-nav li a
+{
+  color: #fff !important;
+  font-weight: 600;
+  float: right;
+  text-align: left;
+}
+
+.navbar-toggler
+{
+  outline: none !important;
+
+}
+
+/*-------------Banner------------*/
+
+#banner
+{
+  background-image: linear-gradient(to right, #4d94ff,#0047b3);
+  color: #fff;
+  padding-top: 5%;
+}
+
+.promo-title
+{
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 100px;
+}
+
+.bi
+{
+  width: 45px;
+  margin: 20px;
+}
+
+#banner a
+{
+  color: #fff;
+  text-decoration: none;
+}
+
+.bottom-img
+{
+  width: 100%;
+  margin-top: 10px;
+}
+
+.img-fluid
+{
+  border-radius: 100px;
+  margin-left: 300px;
+}
+/*-------About Section--------*/
+#about
+{
+  padding: 80px 0;
+}
+
+.about-img
+{
+  width: 200px;
+  margin-top: 20px;
+  margin-left: 300px;
+  margin-right: none;
+  padding-right: 0px;
+}
+
+.about-matter
+{
+  margin-top: 90px;
+}
+/*-----------Vision Section------------------*/
+#vision
+{
+  padding: 80px 0;
+}
+.vision-matter
+{
+  margin-top: 60px;
+  text-align: right;
+}
+
+/*-----------social Section------------------*/
+
+#social-media
+{
+  background-color: #f8f9fa;
+  padding: 100px 0;
+}
+
+#social-media p
+{
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/*-----------social Section------------------*/
+
+#footer
+{
+    background-image: linear-gradient(to right, #4d94ff,#0047b3);
+    color: #fff;
+}
+
+.footer-img
+{
+  width: 100%;
+}
+.img-footer
+{
+  width: 100px;
+  border-radius: 100px;
+}
+
+.footer-box
+{
+  padding: 30px;
+}
+.footer-box img
+{
+  margin-bottom: 20px;
+}
