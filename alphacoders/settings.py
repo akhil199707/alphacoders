@@ -92,12 +92,9 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            with open(os.path.join(BASE_DIR,'dbu.txt')) as b:
-                'NAME': b.read().strip(),
-            with open(os.path.join(BASE_DIR,'dbu.txt')) as a:
-                'USER': a.read().strip(),
-            with open(os.path.join(BASE_DIR,'dbp.txt')) as c:
-                'PASSWORD': c.read().strip(),
+            'NAME': 'alphacoders',
+            'USER': 'akhil',
+            'PASSWORD': 'Alpha_1997',
             'HOST': 'localhost',
             'PORT': '',
         }
