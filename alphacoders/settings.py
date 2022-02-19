@@ -27,10 +27,10 @@ with open(os.path.join(BASE_DIR,'SECRET_KEY.txt')) as f:
     SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['128.199.28.100']
-
+ #
 
 # Application definition
 
@@ -79,13 +79,29 @@ WSGI_APPLICATION = 'alphacoders.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+if DEBUG:
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
+else:
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            with open(os.path.join(BASE_DIR,'dbu.txt')) as b:
+                'NAME': b.read().strip(),
+            with open(os.path.join(BASE_DIR,'dbu.txt')) as a:
+                'USER': a.read().strip(),
+            with open(os.path.join(BASE_DIR,'dbp.txt')) as c:
+                'PASSWORD': c.read().strip(),
+            'HOST': 'localhost',
+            'PORT': '',
+        }
+    }
 
 
 # Password validation

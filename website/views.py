@@ -74,7 +74,7 @@ def view_question(request, qid):
                     t = Profile.objects.get(email=User)
                     t.point += int(pi.points)
                     t.save(update_fields=['point'])
-                    messages.success(request, 'Correct solution but you get points. Keep going')
+                    messages.success(request, 'Correct solution but you get points {}. Keep going'.format(pi.points))
                     return render(request, 'view-question.html',context,)
             else:
                 messages.success(request, 'Check your code there is some error')
