@@ -54,7 +54,7 @@ class Profile(AbstractBaseUser, PermissionsMixin):
     bio = models.TextField(max_length=50000,blank=True,null=True)
     status = models.CharField(max_length=100,choices=STATE,null=True)
     endyear = models.IntegerField(blank=True,null=True)
-    phone = PhoneNumberField(null=True, blank=False, unique=True)
+    phone = PhoneNumberField(blank=False, unique=True)
     point = models.IntegerField(default=0)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=False)
