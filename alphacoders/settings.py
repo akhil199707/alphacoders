@@ -27,9 +27,9 @@ with open(os.path.join(BASE_DIR,'SECRET_KEY.txt')) as f:
     SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['128.199.28.100']
 
 
 # Application definition
@@ -147,11 +147,11 @@ with open(os.path.join(BASE_DIR,'PASS.txt')) as p:
     EMAIL_HOST_PASSWORD = p.read().strip()
 
 #HTTPS settings
-#SESSION_COOKIE_SECURE = True
-#CSRF_COOKIE_SECURE = True
-#SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
 
 #HSTS settings
-#SECURE_HSTS_SECONDS = 31536000 #1 YEAR
-#SECURE_HSTS_PRELOAD = True
-#SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_SECONDS = 31536000 #1 YEAR
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
