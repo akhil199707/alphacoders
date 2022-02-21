@@ -18,8 +18,9 @@ from django.urls import path, include
 from . import views
 from website import views as web_views
 from django.contrib.auth import views as auth_views
+from django.conf.urls import url
 from django.conf import settings
-from django.conf.urls.static import static
+from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,4 +30,5 @@ urlpatterns = [
     path('login/',auth_views.LoginView.as_view(template_name='account/login.html'),name='login'),
     path('questions/',web_views.question, name='questionspage'),
     path('questions/<int:qid>/',web_views.view_question,name='viewquestion'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
+]
