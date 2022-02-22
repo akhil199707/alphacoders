@@ -29,7 +29,7 @@ with open(os.path.join(BASE_DIR,'SECRET_KEY.txt')) as f:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['128.199.28.100']
+ALLOWED_HOSTS = ['128.199.28.100','www.alphacoders.in','alphacoders.in']
  #
 
 # Application definition
