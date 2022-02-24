@@ -57,7 +57,7 @@ class Profile(AbstractBaseUser, PermissionsMixin):
     phone = PhoneNumberField(null=True ,blank=False, unique=True)
     point = models.IntegerField(default=0)
     is_staff = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
 
 
     objects = CustomAccountManager()
