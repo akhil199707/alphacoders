@@ -9,9 +9,10 @@ from website.filehelper.uniquename import get_unique_file_name
 from django.contrib import messages
 import os
 import shutil
+import logging
 
 # Create your views here.
-
+logger = logging.getLogger(__name__)
 #questions
 @login_required
 def question(request):
@@ -53,10 +54,12 @@ def view_question(request, qid):
             'WORKDIR /python\n'+
             'CMD ["python", "test.py"]')
             fc.close()
-            os.system('cd /home/akhil/Alphacoders/code/'+filename+';docker build . -t '+filename+':'+filename)
-            print("build success")
+            try:
+                os.system('cd code/'+filename+';docker build . -t '+filename+':'+filename)
+            except Exception as e:
+                logger.error(str(e))
+
             os.system('cd /home/akhil/Alphacoders/code/'+filename+';docker run --name '+ImageID+' -it '+filename+':'+filename)
-            print("run")
             os.system('cd /home/akhil/Alphacoders/code/'+filename+';docker cp '+ImageID+':/python/answers.txt .')
             os.system('cd /home/akhil/Alphacoders/code/'+filename+';docker ps --filter status=exited -q | xargs docker rm')
             os.system('cd /home/akhil/Alphacoders/code/'+filename+';docker rmi '+filename+':'+filename)
