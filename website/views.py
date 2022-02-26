@@ -54,15 +54,15 @@ def view_question(request, qid):
             'WORKDIR /python\n'+
             'CMD ["python", "test.py"]')
             fc.close()
-            try:
-                os.system('cd code/'+filename+';docker build . -t '+filename+':'+filename)
-            except Exception as e:
-                logger.error(str(e))
-
-            os.system('cd /home/akhil/Alphacoders/code/'+filename+';docker run --name '+ImageID+' -it '+filename+':'+filename)
-            os.system('cd /home/akhil/Alphacoders/code/'+filename+';docker cp '+ImageID+':/python/answers.txt .')
-            os.system('cd /home/akhil/Alphacoders/code/'+filename+';docker ps --filter status=exited -q | xargs docker rm')
-            os.system('cd /home/akhil/Alphacoders/code/'+filename+';docker rmi '+filename+':'+filename)
+#            try:
+#                os.system('cd code/'+filename+';docker build . -t '+filename+':'+filename)
+#            except Exception as e:
+#                logger.error(str(e))
+            os.system('cd code/'+filename+';docker build . -t '+filename+':'+filename)
+            os.system('cd code/'+filename+';docker run --name '+ImageID+' -it '+filename+':'+filename)
+            os.system('cd code/'+filename+';docker cp '+ImageID+':/python/answers.txt .')
+            os.system('cd code/'+filename+';docker ps --filter status=exited -q | xargs docker rm')
+            os.system('cd code/'+filename+';docker rmi '+filename+':'+filename)
             ans = open('code/'+filename+'/answers.txt', "r")
             Verfiy = ans.read()
             if 'done' in Verfiy :
